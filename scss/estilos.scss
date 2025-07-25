@@ -1,0 +1,180 @@
+@import 'variables';
+
+// Mixin para animar la aparición (fade in)
+@mixin fadeIn($duracion) {
+  animation: fadeInAnim $duracion ease-in forwards;
+}
+
+@keyframes fadeInAnim {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: $fuente-principal;
+  background-color: $color-fondo;
+  color: $color-texto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main-nav {
+  background-color: $color-secundario;
+  padding: 1rem 0;
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: $color-primario;
+    text-decoration: none;
+    @include fadeIn(1s);
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li {
+      a {
+        color: $color-texto;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color $tiempo-transicion;
+
+        &:hover {
+          color: lighten($color-primario, 10%);
+          text-shadow: 0 0 5px $color-primario;
+          @include fadeIn(0.5s);
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  height: 60vh;
+  background: url('https://res.cloudinary.com/dnbapw1ef/image/upload/v1752615430/que-instrumentos-componen-un-grupo-de-rock.jpg_i9zquz.webp') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 2px 6px black;
+  @include fadeIn(1.5s);
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    background-color: $color-primario;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color $tiempo-transicion, box-shadow $tiempo-transicion;
+
+    &:hover {
+      background-color: darken($color-primario, 10%);
+      box-shadow: 0 0 15px $color-primario;
+      transform: scale(1.05);
+    }
+  }
+}
+
+main {
+  padding: 2rem;
+
+  section {
+    margin-bottom: 3rem;
+    animation: fadeInAnim 1s ease forwards;
+  }
+
+  .profile-box {
+    background-color: $color-secundario;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: $color-texto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.8);
+    transition: transform $tiempo-transicion ease, box-shadow $tiempo-transicion ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba($color-primario, 0.7);
+    }
+
+    h4 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin: 0.3rem 0;
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// Footer simple y limpio
+footer {
+  background-color: $color-fondo;
+  text-align: center;
+  padding: 2rem;
+  color: lighten($color-texto, 30%);
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  #main-nav .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+
+    li {
+      a {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 1rem;
+
+    .profile-box {
+      margin-bottom: 1rem;
+    }
+  }
+}
