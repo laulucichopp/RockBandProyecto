@@ -1,0 +1,78 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Navegación */
+.navbar {
+  border-bottom: 3px solid #e50914;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #e50914;
+}
+
+/* Secciones */
+section {
+  padding: 60px 0;
+}
+
+h1, h2 {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bg-light {
+  background-color: #1e1e1e !important;
+}
+
+/* Imagen circular */
+img.rounded-circle {
+  border: 4px solid #e50914;
+  transition: transform 0.3s ease-in-out;
+}
+
+img.rounded-circle:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  border-top: 2px solid #e50914;
+}
+
+/* Textos */
+.lead {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Botones o links importantes */
+.btn-rock {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-rock:hover {
+  background-color: #b0060f;
+}

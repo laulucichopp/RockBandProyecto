@@ -1,0 +1,46 @@
+/* ROCK THEME */
+:root{
+  --rock-bg:#0b0b0f;
+  --rock-surface:#12121a;
+  --rock-text:#e8e8e8;
+  --rock-accent:#e50914;
+  --rock-muted:#aaaaaa;
+}
+html,body{
+  background: var(--rock-bg);
+  color: var(--rock-text);
+}
+.navbar, header, footer{
+  background: linear-gradient(180deg, #12121a 0%, #0b0b0f 100%);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+a, .nav-link{ color: var(--rock-text); }
+a:hover, .nav-link:hover{ color: var(--rock-accent); }
+.btn-rock{
+  background: var(--rock-accent);
+  color:#fff;
+  border:none;
+  border-radius: 14px;
+  padding:.65rem 1.1rem;
+  box-shadow: 0 10px 30px rgba(229,9,20,.25);
+}
+.btn-rock:hover{ filter:brightness(1.05); }
+.rock-card{
+  background: var(--rock-surface);
+  color: var(--rock-text);
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+.rock-img{
+  background-image: radial-gradient(60% 60% at 50% 50%, rgba(229,9,20,.25), rgba(0,0,0,.6));
+  backdrop-filter: contrast(1.1) brightness(0.9);
+}
+h1,h2,h3,.display-4{
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.badge.bg-danger-subtle{
+  background: rgba(229,9,20,.15)!important;
+  color: var(--rock-accent)!important;
+}
+/* END ROCK THEME */
