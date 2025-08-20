@@ -1,88 +1,20 @@
+/* main.scss — punto de entrada SASS */
 @import 'variables';
 @import 'mixins';
 @import 'header';
 @import 'footer';
 @import 'home';
-
 @import 'rock-theme';
+@import 'responsive'; /* nuevo parcial con media queries */
 
-
-/* ==== ESTILO ROCKERO ==== */
-$color-principal: #c00;
-$color-secundario: #111;
-$color-texto: #fff;
-$fuente-principal: 'Rock Salt', cursive;
-$fuente-secundaria: 'Oswald', sans-serif;
-
-body {
-    background-color: $color-secundario;
-    color: $color-texto;
-    font-family: $fuente-secundaria;
+/* Animaciones globales */
+@keyframes rock-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
 
-/* Fondo especial para index */
-.home-bg {
-    background-image: url("../img/fondo-rock.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Tarjetas de instrumentos */
-.instrumento-card {
-    background-color: rgba(20,20,20,0.95);
-    border: 2px solid $color-principal;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 20px auto;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0px 0px 15px rgba(255,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 0px 25px rgba(255,0,0,0.7);
-    }
-
-    img {
-        max-width: 100%;
-        border-radius: 8px;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        font-family: $fuente-principal;
-        color: $color-principal;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: 0.95rem;
-        color: lighten($color-texto, 20%);
-    }
-}
-
-/* Encabezados con estilo rockero */
-h1, h2, h3, h4 {
-    font-family: $fuente-principal;
-    color: $color-principal;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-
-/* Botones estilo rock */
-.btn-rock {
-    background-color: transparent;
-    border: 2px solid $color-principal;
-    color: $color-principal;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-family: $fuente-secundaria;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background-color: $color-principal;
-        color: $color-texto;
-        box-shadow: 0px 0px 10px rgba(255,0,0,0.6);
-    }
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 80%, 100% { text-shadow: 0 0 2px #fff, 0 0 8px #ff0044; }
+  20%, 22% { text-shadow: none; }
 }

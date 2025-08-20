@@ -4,3 +4,12 @@
     background-color: $dark-bg;
   }
 }
+/* Navegación */
+.header {
+  nav {
+    a {
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+  }
+}

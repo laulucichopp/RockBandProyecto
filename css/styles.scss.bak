@@ -19,7 +19,7 @@
 }
 .hero h1 {
   font-size: 3rem;
-  color: #fff;
+  color: #000000ff;
   text-shadow: 2px 2px #000;
 }
 .hero p {

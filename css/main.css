@@ -37,12 +37,12 @@
 }
 .hero h1 {
   font-size: 3rem;
-  color: #fff;
+  color: #000000;
   text-shadow: 2px 2px #000;
 }
 .hero p {
   font-size: 1.2rem;
-  color: #fff;
+  color: #0f0d0d;
 }
 
 /* Home refinements */
@@ -66,14 +66,14 @@
 :root {
   --rock-bg:#0b0b0f;
   --rock-surface:#12121a;
-  --rock-text:#e8e8e8;
+  --rock-text:#070606;
   --rock-accent:#e50914;
   --rock-muted:#aaaaaa;
 }
 
 body {
   background-color: #000;
-  color: #fff;
+  color: #0e0e0e;
 }
 
 .navbar, header, footer {
@@ -148,7 +148,7 @@ img, video, canvas {
   padding-right: 1rem;
 }
 
-/* Breakpoints Bootstrap-ish */
+
 @media (max-width: 576px) {
   h1 {
     font-size: 1.75rem;

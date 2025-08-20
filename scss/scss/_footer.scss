@@ -3,3 +3,8 @@
   color: $light-text;
   font-size: 0.9rem;
 }
+/* Footer enlaces */
+.footer {
+  a { color: $light-text; opacity: .9; }
+  a:hover { opacity: 1; text-decoration: underline; }
+}

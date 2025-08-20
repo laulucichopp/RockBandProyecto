@@ -13,3 +13,10 @@
     color: $light-text;
   }
 }
+/* Home refinements */
+.rock-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+  &:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+}
+.hero h1 { animation: neon-flicker 5s infinite; }
+.btn.btn-danger { animation: rock-pulse 3s infinite; }
